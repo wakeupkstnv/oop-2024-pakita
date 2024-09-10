@@ -2,6 +2,7 @@ package LAB_1;
 
 import java.util.Scanner;
 
+
 public class Task5 {
     private static double addPercent(int balance, int percent) {
         return balance * (1 + percent / 100.0);
