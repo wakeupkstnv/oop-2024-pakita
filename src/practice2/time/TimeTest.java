@@ -1,4 +1,4 @@
-package PRACTICE_1;
+package practice2.time;
 
 public class TimeTest {
     public static void main(String[] args) {

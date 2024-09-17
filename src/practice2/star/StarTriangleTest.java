@@ -1,4 +1,4 @@
-package PRACTICE_1;
+package practice2.star;
 
 public class StarTriangleTest {
     public static void main(String[] args) {

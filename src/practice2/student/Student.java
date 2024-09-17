@@ -1,4 +1,4 @@
-package PRACTICE_1;
+package practice2.student;
 
 public class Student {
     static int studentCount;

@@ -16,7 +16,9 @@
 *.iws
 
 out/
-
+draft/
+#dont forget to delete
+lab1/
 # Maven / Gradle
 target/
 build/
