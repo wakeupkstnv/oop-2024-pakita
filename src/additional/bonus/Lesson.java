@@ -1,10 +1,15 @@
 package additional.bonus;
+import additional.bonus.enums.Days;
+import additional.bonus.enums.Format;
+import additional.bonus.enums.LessonType;
+
 import java.util.Vector;
 
 public class Lesson {
 	String name;
 	private int id; // read only
 	Days day;
+	private LessonType lessonType;
 	private Time time;
 	private Time duration;
 	private Room room;
@@ -22,21 +27,22 @@ public class Lesson {
 	public Lesson() {
 		
 	}
-	public Lesson(String name, Days day, Time time, Time duration) {
+	public Lesson(String name, Days day, LessonType lessonType, Time time, Time duration) {
 		this.name = name;
 		this.day = day;
+		this.lessonType = lessonType;
 		this.time = time;
 		this.duration = duration;
 	}
-	public Lesson(String name, Days day, Time time, Time duration, Format format)
+	public Lesson(String name, Days day, LessonType lessonType, Time time, Time duration, Format format)
 	{
-		this(name, day, time, duration);
+		this(name, day, lessonType, time, duration);
 		this.format = format;
 	}
 
-	public Lesson(String name, Days day, Time time, Time duration, Format format, Room room)
+	public Lesson(String name, Days day, LessonType lessonType, Time time, Time duration, Format format, Room room)
 	{
-		this(name, day, time, duration, format);
+		this(name, day, lessonType, time, duration, format);
 		this.room = room;
 	}
 
@@ -53,12 +59,12 @@ public class Lesson {
 	public void setRoom(Room room) { this.room = room; }
 
 	public String toString() {
-		return "Lesson "+ name+ ", "+ id + ", "+day + ", "+format + ", "+time + ".";
+		return "Lesson "+name + ", "+ id + ", "+day + ", "+format + ", "+time + ".";
 	}
 	public boolean checkCollision(Lesson b) {
 		return checkCollision(this,b);
 	}
-	static boolean checkCollision(Lesson a, Lesson b) {
+	static boolean   checkCollision(Lesson a, Lesson b) {
 		int startA = Time.toMinute(a.time.hour, a.time.min);
 		int endA = startA + Time.toMinute(a.duration.hour, a.duration.min);
 

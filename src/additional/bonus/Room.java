@@ -5,6 +5,9 @@ public class Room {
     private String floor;
     private int capacity;
 
+    public Room() {
+
+    }
     public Room(String name, String floor, int capacity) {
         this.name = name;
         this.floor = floor;
