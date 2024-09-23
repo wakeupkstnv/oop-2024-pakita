@@ -1,0 +1,14 @@
+package lab1.task2;
+
+public enum Village {
+    IWAGAKURE,
+    KONOHAGAKURE,
+    KUMOGAKURE,
+    SUNAGAKURE,
+    KIRIGAKURE,
+    AMEGAKURE,
+    KUSAGAKURE,
+    OTOKAGAKURE,
+    TAKIGAKURE,
+    YUGAKURE
+}

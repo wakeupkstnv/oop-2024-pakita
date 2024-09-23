@@ -5,11 +5,11 @@ public class Student {
     int id, yearOfStudy;
     String name;
 
-    Student(){
+    public Student(){
         id = studentCount++;
     }
 
-    Student(String name, int yearOfStudy){
+    public Student(String name, int yearOfStudy){
         this();
         this.name = name;
         this.yearOfStudy = yearOfStudy;
@@ -28,6 +28,6 @@ public class Student {
     }
 
     public String toString() {
-        return this.id + " " + name + " " + yearOfStudy;
+        return "id: " + this.id + " name: " + name + " year of study: " + yearOfStudy;
     }
 }
