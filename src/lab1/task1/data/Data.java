@@ -5,17 +5,24 @@ public class Data {
     private double sum;
     private double max;
 
+    {
+        this.sum = 0;
+        this.max = 0;
+        this.len = 0;
+    }
+
     public Data() {
     }
 
-    public final void add(int number){
+    public void add(int number){
         this.len++;
         this.sum += number;
         this.max = this.max > number ? this.max : number;
     }
 
     public final double getAvg(){
-        return sum / len;
+        if (len != 0) {return sum / len;}
+        else {return 0.0;}
     }
 
     public final double getMax(){

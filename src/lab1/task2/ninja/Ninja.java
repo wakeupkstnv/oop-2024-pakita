@@ -25,7 +25,6 @@ public class Ninja {
         this.rank = rank;
     }
 
-
     public Ninja(String name, Village village, Rank rank, int aura){
         this(name, village, rank);
         this.aura = aura;

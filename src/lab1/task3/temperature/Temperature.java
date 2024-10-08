@@ -3,8 +3,8 @@ package lab1.task3.temperature;
 import lab1.task3.Scale;
 
 public class Temperature {
-    private double value;
     private Scale scale;
+    private double value;
 
     {
         this.value = 0;

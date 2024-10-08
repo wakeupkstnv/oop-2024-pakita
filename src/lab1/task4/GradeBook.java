@@ -17,6 +17,7 @@ public class GradeBook {
         }
         distribution.put("100", 0);
     }
+
     public GradeBook(Course course){
         this.course = course;
     }
