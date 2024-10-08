@@ -1,6 +1,7 @@
 package practice3.problem1;
 
-public abstract class Animal {    int age;
+public abstract class Animal {
+    int age;
     String name;
     Gender gender;
     boolean isHappy;
@@ -11,11 +12,13 @@ public abstract class Animal {    int age;
         this.speed = 0;
         this.isHungry = false;
     }
+
     public Animal(int age, String name, Gender gender){
         this.age = age;
         this.name = name;
         this.gender = gender;
     }
+
     public abstract String move();
 
     public void addSpeed(int amountOfFeed){

@@ -1,8 +1,8 @@
 package practice3.problem2;
 
 public class Person {
-    final String name;
-    String address;
+    private final String name;
+    private String address;
 
     public Person(String name, String address){
         this.name = name;

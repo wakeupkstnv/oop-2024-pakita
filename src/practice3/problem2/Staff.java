@@ -1,8 +1,8 @@
 package practice3.problem2;
 
 public class Staff extends Person{
-    String school;
-    double pay;
+    private String school;
+    private double pay;
 
     public Staff(String name, String address, String school, double pay){
         super(name, address);

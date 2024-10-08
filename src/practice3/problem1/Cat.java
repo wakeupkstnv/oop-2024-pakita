@@ -13,7 +13,7 @@ public class Cat extends Animal {
 
 
     public void addSpeed(int amountOfFeed, int time) {
-        int speedIncrease = amountOfFeed >= 3 ? 10 : 1;
+            int speedIncrease = amountOfFeed >= 3 ? 10 : 1;
         super.speed += speedIncrease * time;
     }
 
