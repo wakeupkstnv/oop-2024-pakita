@@ -15,13 +15,21 @@ public class Book extends LibraryItem {
         return this.numberOfPages;
     }
 
+    public void readTheBook(){
+        if (getTitle().length() >= 10 ||
+            getPublicationYear() >= 2000 ||
+            getNumberOfPages() >= 100){
+            System.out.println("This book is very interesting :)");
+        } else{
+            System.out.println("This book is not interesting :(");
+        }
+    }
+
     @Override
     public String toString() {
         return super.toString() + "Book[" +
                 "numberOfPages=" + numberOfPages +
                 ']';
     }
-
-
     // continue with anything necessary
 }
