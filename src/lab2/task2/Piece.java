@@ -13,6 +13,9 @@ public abstract class Piece {
 
     public abstract boolean isLegalMove(Position nextPosition);
 
+    boolean isInOnOnePosition(Position nextPosition){
+        return this.thisPosition.equals(nextPosition);
+    }
 //    public abstract void move(Position nextPosition);
     public static boolean isInBoard(Position position){
         return position.positionX >= 'a' && position.positionX <= 'h'

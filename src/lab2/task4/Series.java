@@ -11,15 +11,11 @@ public class Series extends Circuit {
 
     @Override
     public double getResistance() {
-        System.out.println("Series: расчёт сопротивления");
-        double result = circuit1.getResistance() + circuit2.getResistance();
-        System.out.println("Series: общее сопротивление = " + result);
-        return result;
+        return circuit1.getResistance() + circuit2.getResistance();
     }
 
     @Override
     public void applyPotentialDiff(double V) {
-        System.out.println("Series: распределение напряжения " + V + "В");
         double totalResistance = getResistance();
         double v1 = V * (circuit1.getResistance() / totalResistance);
         double v2 = V * (circuit2.getResistance() / totalResistance);

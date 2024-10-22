@@ -13,7 +13,7 @@ public class Rook extends Piece {
     }
 
     public boolean isLegalMove(Position nextPosition) {
-        return isLegalMove(this.thisPosition, nextPosition);
+        return isLegalMove(this.thisPosition, nextPosition) && !isInOnOnePosition(nextPosition);
     }
 
 }

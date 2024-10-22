@@ -11,17 +11,13 @@ public class Parallel extends Circuit {
 
     @Override
     public double getResistance() {
-        System.out.println("Parallel: расчёт сопротивления");
         double r1 = circuit1.getResistance();
         double r2 = circuit2.getResistance();
-        double result = 1 / (1 / r1 + 1 / r2);
-        System.out.println("Parallel: общее сопротивление = " + result);
-        return result;
+        return 1 / (1 / r1 + 1 / r2);
     }
 
     @Override
     public void applyPotentialDiff(double V) {
-        System.out.println("Parallel: установка напряжения " + V + "В на обе цепи");
         circuit1.applyPotentialDiff(V);
         circuit2.applyPotentialDiff(V);
     }

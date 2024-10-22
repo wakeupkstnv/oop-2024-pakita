@@ -10,7 +10,6 @@ public class Resistor extends Circuit {
 
     @Override
     public double getResistance() {
-        System.out.println("Resistor: сопротивление = " + resistance);
         return resistance;
     }
 
@@ -22,6 +21,5 @@ public class Resistor extends Circuit {
     @Override
     public void applyPotentialDiff(double V) {
         this.potentialDifference = V;
-        System.out.println("Resistor: установлено напряжение = " + V + "В");
     }
 }

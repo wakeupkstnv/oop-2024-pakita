@@ -11,6 +11,6 @@ public class Queen extends Piece{
     }
     @Override
     public boolean isLegalMove(Position nextPosition) {
-        return isLegalMove(this.thisPosition, nextPosition);
+        return isLegalMove(this.thisPosition, nextPosition) && isInBoard(nextPosition) && !isInOnOnePosition(nextPosition);
     }
 }

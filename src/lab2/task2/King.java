@@ -13,6 +13,6 @@ public class King extends Piece {
 
     @Override
     public boolean isLegalMove(Position nextPosition) {
-        return isLegalMove(this.thisPosition, nextPosition);
+        return isLegalMove(this.thisPosition, nextPosition) && !isInOnOnePosition(thisPosition);
     }
 }

@@ -20,9 +20,9 @@ public class Pawn extends Piece{
     public boolean isLegalMove(Position nextPosition) {
         int diffY = nextPosition.positionY - thisPosition.positionY;
         if (movesCount == 0){
-            return isLegalMove(this.thisPosition, nextPosition);
+            return isLegalMove(this.thisPosition, nextPosition) && isInBoard(nextPosition) && !isInOnOnePosition(thisPosition);
         } else{
-            return (diffY == 1);
+            return (diffY == 1) && isInBoard(nextPosition) && !isInOnOnePosition(thisPosition);
         }
     }
 }
