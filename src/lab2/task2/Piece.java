@@ -13,6 +13,7 @@ public abstract class Piece {
 
     public abstract boolean isLegalMove(Position nextPosition);
 
+//    public abstract void move(Position nextPosition);
     public static boolean isInBoard(Position position){
         return position.positionX >= 'a' && position.positionX <= 'h'
                 && position.positionY >= 1 && position.positionY <= 8;
