@@ -1,5 +1,7 @@
 package practice3.problem1;
 
+import java.util.Objects;
+
 public abstract class Animal {
     int age;
     String name;
@@ -55,5 +57,18 @@ public abstract class Animal {
                 ", isHungry=" + isHungry +
                 ", speed=" + speed +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Animal animal = (Animal) o;
+        return age == animal.age && isHappy == animal.isHappy && isHungry == animal.isHungry && speed == animal.speed && Objects.equals(name, animal.name) && gender == animal.gender;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(age, name, gender, isHappy, isHungry, speed);
     }
 }

@@ -7,7 +7,6 @@ public abstract class Device {
     private String model;
     private boolean isTurnedOn;
     private int bateryLevel;
-
     private int power;
 
     public Device(String brand, String model, boolean isTurnedOn, int bateryLevel, int power){
