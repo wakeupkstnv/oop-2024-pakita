@@ -61,8 +61,6 @@ public class Student {
         return list;
     }
 
-
-
     @Override
     public String toString() {
         return ""+name + ", "+facluty;
